@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import Room from "./messenger/ui/Room";
+import Room from "./messenger/Room";
 
 const App = () => (
   <div>
