@@ -19,6 +19,7 @@ module.exports = {
     "react/jsx-filename-extension": [1, { "extensions": [".js"] }],
     "react/jsx-boolean-value": "off",
     "space-before-function-paren": "off",
+    "quotes": "off",
   },
   "settings": {
       "import/resolver": {
