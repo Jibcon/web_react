@@ -6,37 +6,29 @@ import Chat from "./Chat";
 import Inputbar from "./Inputbar";
 // import getChats from "../utils/ChatDBHelper";
 
-const Room = () => {
-  // var chats = getChats();
-  const chats = [
-    {
-      text: "hi",
-      author: "jyp",
-      room: "myroom",
-      timeStamp: "December 17, 1995 03:24:00",
-    },
-    {
-      text: "hi",
-      author: "jyp",
-      room: "myroom",
-      timeStamp: "December 17, 1995 03:24:00",
-    },
-    {
-      text: "hi",
-      author: "jyp",
-      room: "myroom",
-      timeStamp: "December 17, 1995 03:24:00",
-    },
-  ];
-
+// const Room = (props = {}) => {
+function Room(props) {
   return (
     <div>
       <h1>Room!</h1>
 
-      {chats.map(chat => <Chat data={chat} />)}
+      {props.initialChats.map(chat => <Chat data={chat} />)}
       <Inputbar />
     </div>
   );
+}
+
+Room.propTypes = {
+  initialChats: React.PropTypes.arrayOf(React.PropTypes.shape({
+    text: React.PropTypes.string.isRequired,
+    author: React.PropTypes.string.isRequired,
+    room: React.PropTypes.string.isRequired,
+    timeStamp: React.PropTypes.string.isRequired,
+  })).isRequired,
+};
+
+Room.defaultProps = {
+  data: {},
 };
 
 export default Room;
