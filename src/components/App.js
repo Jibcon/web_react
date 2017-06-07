@@ -5,18 +5,21 @@ import Room from "./messenger/Room";
 // var chats = getChats();
 const CHATS = [
   {
+    id: 1,
     text: "hi",
     author: "jyp",
     room: "myroom",
     timeStamp: "December 17, 1995 03:24:00",
   },
   {
+    id: 2,
     text: "hi",
     author: "jyp",
     room: "myroom",
     timeStamp: "December 17, 1995 03:24:00",
   },
   {
+    id: 3,
     text: "hi",
     author: "jyp",
     room: "myroom",

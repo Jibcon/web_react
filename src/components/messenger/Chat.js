@@ -7,7 +7,7 @@
 import React, { PropTypes } from 'react';
 
 const Chat = (props = {}) => {
-  const { data: { author, room, timeStamp, text } } = props;
+  const { id, author, room, timeStamp, text } = props;
 
   return (
     <div
@@ -17,6 +17,7 @@ const Chat = (props = {}) => {
         color: "white",
       }}
     >
+      <h6> id : {id} </h6>
       <h6> author : {author} </h6>
       <h6> room : {room} </h6>
       <h6> timestamp : {timeStamp} </h6>
@@ -26,7 +27,11 @@ const Chat = (props = {}) => {
 };
 
 Chat.propTypes = {
-  data: PropTypes.objectOf(PropTypes.string),
+  id: PropTypes.number.isRequired,
+  text: PropTypes.string.isRequired,
+  author: PropTypes.string.isRequired,
+  room: PropTypes.string.isRequired,
+  timeStamp: PropTypes.string.isRequired,
 };
 
 Chat.defaultProps = {
