@@ -14,7 +14,8 @@ module.exports = {
   "rules": {
     "import/no-extraneous-dependencies": "off",
     "import/no-named-as-default": 1,
-    "jsx-quotes": ["error", "prefer-single"],
+    // "jsx-quotes": ["error", "prefer-single"],
+    "jsx-quotes": "off",
     "keyword-spacing": "off",
     "react/jsx-filename-extension": [1, { "extensions": [".js"] }],
     "react/jsx-boolean-value": "off",

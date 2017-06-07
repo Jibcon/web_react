@@ -7,28 +7,34 @@ import Inputbar from "./Inputbar";
 // import getChats from "../utils/ChatDBHelper";
 
 // const Room = (props = {}) => {
-function Room(props) {
-  return (
-    <div>
-      <h1>Room!</h1>
+const Room = React.createClass({
+  propTypes: {
+    initialChats: React.PropTypes.arrayOf(React.PropTypes.shape({
+      text: React.PropTypes.string.isRequired,
+      author: React.PropTypes.string.isRequired,
+      room: React.PropTypes.string.isRequired,
+      timeStamp: React.PropTypes.string.isRequired,
+    })).isRequired,
+  },
 
-      {props.initialChats.map(chat => <Chat data={chat} />)}
-      <Inputbar />
-    </div>
-  );
-}
+  defaultProps: {
+    initialChats: {},
+  },
 
-Room.propTypes = {
-  initialChats: React.PropTypes.arrayOf(React.PropTypes.shape({
-    text: React.PropTypes.string.isRequired,
-    author: React.PropTypes.string.isRequired,
-    room: React.PropTypes.string.isRequired,
-    timeStamp: React.PropTypes.string.isRequired,
-  })).isRequired,
-};
+  onChatSend(content) {
+    console.log("onChatSend", content);
+  },
 
-Room.defaultProps = {
-  data: {},
-};
+  render() {
+    return (
+      <div>
+        <h1>Room!</h1>
+
+        {this.props.initialChats.map(chat => <Chat data={chat} />)}
+        <Inputbar onSend={this.onChatSend} />
+      </div>
+    );
+  },
+});
 
 export default Room;
