@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom';
 import { AppContainer } from 'react-hot-loader';
 import {
   BrowserRouter as Router,
-  Link,
+  // Link,
   Route,
 } from 'react-router-dom';
 import { Provider } from 'react-redux';
@@ -12,6 +12,8 @@ import App from './components/App';
 import initialState from './constants/initialState';
 import serverInit from './actions/serverInit';
 import Store from './store';
+import Header from "./components/Header";
+import Footer from "./components/Footer";
 
 // Grab the state from a global variable injected into the server-generated HTML
 const preloadedState = window.PRELOADED_STATE || initialState;
@@ -24,10 +26,9 @@ const render = (Component) => {
       <Provider store={store}>
         <Router>
           <div>
-            <ul>
-              <li><Link to='/'>Home</Link></li>
-            </ul>
+            <Header />
             <Route path='/' component={Component} exact={true} />
+            <Footer />
           </div>
         </Router>
       </Provider>
