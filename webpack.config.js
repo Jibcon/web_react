@@ -31,6 +31,7 @@ module.exports = {
   devServer: {
     // enable HMR on the server
     hot: true,
+    disableHostCheck: true,
     // match the output path
     contentBase: path.resolve(__dirname, 'dist'),
     // match the output `publicPath`
