@@ -5,6 +5,7 @@
   "main": "index.js",
   "scripts": {
     "local": "node_modules/.bin/webpack-dev-server",
+    "prod": "node_modules/.bin/webpack-dev-server --hot --host 0.0.0.0",
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "webpack -p"
   },
