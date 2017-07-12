@@ -1,24 +1,21 @@
 {
-  "name": "audio-visualizer",
+  "name": "smArts",
   "version": "0.0.1",
-  "description": "audio visualizer",
+  "description": "smArts Web",
   "main": "index.js",
   "scripts": {
     "local": "node_modules/.bin/webpack-dev-server",
-    "prod": "node_modules/.bin/webpack-dev-server --hot --host 0.0.0.0",
+    "prod": "node_modules/.bin/webpack-dev-server --host 0.0.0.0",
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "webpack -p"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/calebhskim/audio-visualizer.git"
+    "url": "git+https://github.com/Jibcon/web_react.git"
   },
-  "author": "Caleb Kim",
+  "author": "JYP",
   "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/calebhskim/audio-visualizer/issues"
-  },
-  "homepage": "https://github.com/calebhskim/audio-visualizer#readme",
+  "homepage": "http://smarts.asuscomm.com/",
   "devDependencies": {
     "babel-core": "^6.24.1",
     "babel-loader": "^7.0.0",

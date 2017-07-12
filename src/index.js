@@ -12,8 +12,6 @@ import App from './components/App';
 import initialState from './constants/initialState';
 import serverInit from './actions/serverInit';
 import Store from './store';
-import Test from './components/Test';
-import NewComponent from "./components/NewComponent";
 
 // Grab the state from a global variable injected into the server-generated HTML
 const preloadedState = window.PRELOADED_STATE || initialState;
@@ -28,11 +26,8 @@ const render = (Component) => {
           <div>
             <ul>
               <li><Link to='/'>Home</Link></li>
-              <li><Link to='/test'>Test</Link></li>
             </ul>
             <Route path='/' component={Component} exact={true} />
-            <Route path='/test' component={Test} />
-            <Route path='/ad' component={NewComponent} />
           </div>
         </Router>
       </Provider>
