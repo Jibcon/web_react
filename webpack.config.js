@@ -8,7 +8,7 @@ module.exports = {
     path: path.resolve(__dirname, 'dist'),
     filename: 'bundle.js',
     // necessary for HMR to know where to load the hot update chunks
-    publicPath: '/'
+    publicPath: '/',
   },
   devtool: 'cheap-module-source-map',
   context: path.resolve(__dirname, 'src'),
@@ -25,7 +25,7 @@ module.exports = {
     // bundle the client for hot reloading
     // only- means to only hot reload for successful updates
 
-    './index.js'
+    './index.js',
     // the entry point of our app
   ],
   devServer: {
@@ -36,14 +36,16 @@ module.exports = {
     contentBase: path.resolve(__dirname, 'dist'),
     // match the output `publicPath`
     publicPath: '/',
-    historyApiFallback: true
+    historyApiFallback: true,
   },
   module: {
+
     rules: [
       { test: /\.js$/, exclude: /node_modules/, loader: "babel-loader" },
       { test: /\.js$/, exclude: /node_modules/, loader: "eslint-loader" },
-      { test: /\.css$/, use: [ 'style-loader', 'css-loader?modules', ] },
-    ]
+      { test: /\.css$/, use: ['style-loader', 'css-loader?modules'] },
+      { test: /\.(woff|eot)$/, use: 'file-loader' },
+    ],
   },
   plugins: [
     // enable HMR globally
@@ -51,13 +53,13 @@ module.exports = {
     // prints more readable module names in the browser console on HMR updates
     new webpack.NamedModulesPlugin(),
     new HtmlWebpackPlugin({
-      template: 'static/index.html'
+      template: 'static/index.html',
     }),
     new CopyWebpackPlugin([
       {
         from: 'public',
         to: 'dist',
-      }
-    ], {})
+      },
+    ], {}),
   ],
 };

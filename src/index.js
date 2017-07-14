@@ -14,6 +14,7 @@ import serverInit from './actions/serverInit';
 import Store from './store';
 import Header from "./components/Header";
 import Footer from "./components/Footer";
+import "../styles/css/reset.css";
 
 // Grab the state from a global variable injected into the server-generated HTML
 const preloadedState = window.PRELOADED_STATE || initialState;
