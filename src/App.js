@@ -12,11 +12,55 @@ class GuestList extends Component {
 
   render() {
     return (
-      <div className="">
-        <ul>
-
-
-        </ul>
+      <div>
+        <header style={infoSection}>
+          <ul style={infoList}>
+            <li>
+              <a href="#jibcon">
+                <span>
+                  jibcon
+                  </span>
+              </a>
+            </li>
+            <li>
+              <a href="#Recruit">
+                <span>
+                  Recruit
+                </span>
+              </a>
+            </li>
+            <li>
+              <a href="#People">
+                <span>
+                  People
+                </span>
+              </a>
+            </li>
+            <li>
+              <a href="#Contact">
+                <span>
+                  Contact
+                </span>
+              </a>
+            </li>
+          </ul>
+        </header>
+        <div>
+          <section>
+            <div id="jibcon">
+              jibcon
+            </div>
+            <div id="Recruit">
+              채용
+            </div>
+            <div id="People">
+              사람들
+            </div>
+            <div id="Contact">
+              연락
+            </div>
+          </section>
+        </div>
       </div>
     );
   }
