@@ -6,6 +6,15 @@ module.exports = {
     filename: 'bundle.js'
   },
 
+  devServer: {
+
+    compress: true,
+
+    disableHostCheck: true,   // That solved it
+
+  },
+
+
   module: {
     loaders: [
       {
