@@ -7,9 +7,9 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "webpack",
     "start": "webpack-dev-server --progress --inline --hot",
-    "prod": "node_modules/.bin/webpack-dev-server --progress --inline --hot --host 0.0.0.0",
-
+    "prod": "node_modules/.bin/webpack-dev-server --progress --inline --hot --host 0.0.0.0"
   },
+
   "repository": {
     "type": "git",
     "url": "git+https://github.com/Jibcon/web_react.git"
