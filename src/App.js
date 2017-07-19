@@ -8,13 +8,13 @@ import { render } from 'react-dom';
 import './css/style.css';
 
 // Component
-class GuestList extends Component {
+class IntroComponent extends Component {
 
   render() {
     return (
-      <div>
-        <header style={infoSection}>
-          <ul style={infoList}>
+      <div className="container">
+        <header>
+          <ul>
             <li>
               <a href="#jibcon">
                 <span>
@@ -67,6 +67,6 @@ class GuestList extends Component {
 }
 
 render(
-<GuestList />,
+  <IntroComponent />,
   document.getElementById('root')
 );

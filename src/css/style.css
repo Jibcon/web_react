@@ -2,3 +2,36 @@ body {
     font-family: 'Lato', sans-serif;
     background: #e5e5e5;
 }
+
+.container {
+    width: 70%;
+    margin: 2em auto 0;
+    padding: 1.5em;
+    background: #fff;
+    border-radius: .5em;
+    box-shadow: 0 2px 0 rgba(0,0,0,.1);
+}
+
+@media (min-width: 768px) {
+    .container {
+        width: 50%;
+    }
+}
+
+/* ================================= 
+    ReactCSSTransitionGroup Classes
+==================================== */
+
+/* start enter state */
+
+
+/* end enter state */
+
+
+/* start leave state */
+
+
+/* end leave state */
+
+
+/* initial mounting */
